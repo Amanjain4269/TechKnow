@@ -1,0 +1,85 @@
+/* Header.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .header-left h1 {
+    font-size: 24px;
+  }
+  
+  .header-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  /* Home.css (similarly, create separate CSS files for other components) */
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ContactForm.css (you can create a separate CSS file for the ContactForm component) */
+/*   .contact-form {
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  } */
+
+  contact-form{
+    display: block;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 2px #ddd;
+    margin: 40px auto;
+    max-width: 400px;
+    max-height: 500px;
+    padding: 20px 40px;
+  }
+  
+  form input, textarea{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px auto;
+    padding: 20px;
+    font-family:'Courier New', Courier, monospace;
+    background-color: #f3f3ff;
+    border: 1px solid #ddd;
+  }
+
+  form span{
+    color: royalblue
+  }
+
+  form button{
+    height: 25px;
+    width: 80px;
+    align-items: center;
+    border: none;
+    background-color: rgb(64, 98, 135);
+    color: #fff;
+    cursor: pointer;
+  }
