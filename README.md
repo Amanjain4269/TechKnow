@@ -20,10 +20,13 @@ git clone https://github.com/amanjain4269/techknow-app.git
 cd techknow-app
 ```
 
-2. Clone the repository:
+2. Install Dependencies and Build the React App:
 
+```bash
 npm install
 npm run build
+```
+* Setup the .env file as per Emailjs account (https://www.emailjs.com/), Service and Templates in the project root directory to get the Emailjs service fuctional in the src/components/contactForm.js file.
 
 3. Dockerize the React App:
 Create a Dockerfile in the root directory of your React app with the following content:
@@ -56,8 +59,20 @@ Create a service.yaml file with the following content: https://github.com/Amanja
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 ```
+9. Check if all the pods (including replicas) and the srevices are running:
+```bash
+kubectl get pods
+kubectl get svc
+kubectl get all
+```
 
-9. Jenkins Pipeline (Optional)
+10. Test the application Up and Running by executing this minikube command:
+```bash
+minikube service techknow-app-service --url
+```
+Check whether the application is up and running from the url provided.
+
+11. Jenkins Pipeline (Optional)
 If you want to set up a Jenkins pipeline for continuous deployment, follow these additional steps:
 
 Install Jenkins on your system: https://www.jenkins.io/doc/book/installing/
@@ -68,5 +83,4 @@ Make sure to install the necessary plugins, such as Kubernetes plugin and Docker
 
 Run the Jenkins pipeline, and it will build the Docker image, push it to Docker Hub, and deploy the application to the Kubernetes cluster using Minikube.
 
-**Note: Please note that this `README.md` assumes that you have already created the `Jenkinsfile` and provided the necessary configurations for the Jenkins pipeline. If not, you can refer to the earlier provided Jenkinsfile template and modify it to fit your project's requirements.
-
+** Note: Please note that this `README.md` assumes that you have already created the `Jenkinsfile` and provided the necessary configurations for the Jenkins pipeline. If not, you can refer to the earlier provided Jenkinsfile template (https://github.com/Amanjain4269/TechKnow/blob/master/Jenkinsfile) and modify it to fit your project's requirements.
