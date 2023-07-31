@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: techknow-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: techknow-app
+  template:
+    metadata:
+      labels:
+        app: techknow-app
+    spec:
+      containers:
+        - name: techknow-app-container
+          image: amanjain4269/techknow-app:latest
+          ports:
+            - containerPort: 3000  # port on which application runs on

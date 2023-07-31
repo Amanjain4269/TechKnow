@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: techknow-app-service
+spec:
+  selector:
+    app: techknow-app
+  ports:
+    - protocol: TCP
+      port: 80  # The port application listens on inside the cluster
+      targetPort: 3000  # The port application is exposed on in the container
+  type: NodePort
