@@ -9,7 +9,7 @@ const Section3 = () => {
           <h2>Embrace the Latest Technology Trends</h2>
           <p>
             Get insights into the most cutting-edge technologies shaping the industry. Stay updated with the latest
-            advancements, tools, and techniques. Build the skills that future-proof your career.
+            advancements, tools, and techniques. Build the skills that strengthen and future-proof your career.
           </p>
         </div>
         <div className="image">
