@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 // Kubernetes credentials
-                withKubeConfig([credentialsId: 'k8s-credentials']) {
+                withKubeConfig([credentialsId: 'k8sCred']) {
                     // Applying Kubernetes manifests (deployment.yaml and service.yaml)
                     sh 'kubectl apply -f deployment.yaml'
                     sh 'kubectl apply -f service.yaml'
